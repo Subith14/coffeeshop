@@ -1,0 +1,63 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+nav{
+    align-items: center;
+}
+nav ul{
+   
+    list-style-type: none;
+    margin-right: 50px;
+}
+nav ul li a{
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+}
+nav h1{
+    color: white;
+    font-family: 'Rubik Distressed', cursive;
+    font-size: 60px;
+    margin-left: 250px;
+}
+nav div{
+    margin-left:150px ;
+}
+nav div button{
+    margin-left: 10px;
+}
+video{
+ width: 100%;     
+}
+#strong{
+    position: absolute;
+    top: 200px;
+    left: 30%;
+}
+#strong .p1{
+    font-size: 30px;
+}
+#span2{
+    margin-left: 180px;
+}
+#border1{
+    border: 2px solid whitesmoke;
+    width: 600px;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:400px){
+nav{
+    width: 400px;
+}
+}
+
+
+

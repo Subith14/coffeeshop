@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofee shop</title>
+     <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- title font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Barlow:ital,wght@1,300&family=Blinker&family=Borel&family=Carter+One&family=Courgette&family=Croissant+One&family=Hind+Siliguri&family=Josefin+Sans:ital@1&family=Merriweather+Sans:wght@400;500&family=Pathway+Gothic+One&family=Phudu:wght@600&family=Playfair+Display:wght@600&family=Roboto&family=Rubik+Dirt&family=Rubik+Distressed&family=Rubik+Glitch&family=Titan+One&display=swap" rel="stylesheet">
+<!-- usual fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Barlow:ital,wght@1,300&family=Blinker&family=Borel&family=Carter+One&family=Courgette&family=Croissant+One&family=Hind+Siliguri&family=Josefin+Sans:ital@1&family=Merriweather+Sans:wght@400;500&family=Pathway+Gothic+One&family=Phudu:wght@600&family=Roboto&family=Rubik+Dirt&family=Rubik+Glitch&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Barlow:ital,wght@1,300&family=Blinker&family=Borel&family=Carter+One&family=Courgette&family=Croissant+One&family=Hind+Siliguri&family=Josefin+Sans:ital@1&family=Lobster&family=Merriweather+Sans:wght@400;500&family=Pacifico&family=Pathway+Gothic+One&family=Phudu:wght@600&family=Playfair+Display:wght@600&family=Roboto&family=Rubik+Dirt&family=Rubik+Distressed&family=Rubik+Glitch&family=Titan+One&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Merriweather Sans', sans-serif;background-color: rgba(0,0,0,0.7); overflow-x: hidden;">
+        <nav class="d-flex" style="background-color: rgba(0,0,0,0.5); height: 100px;">
+            <img style="position: sticky;top: 0px;" src="data:image/png;base64,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" alt="" width="120px" height="105px">
+            
+            <h1 class="text-center">COSTA <span style="color: rgb(199, 151, 20);">COFFEE</span></h1>
+            <div class="d-flex">
+           <input class="form-control" type="text" placeholder="Search your coffee"><button class="btn btn-dark">Search</button> </div>
+        </nav>
+        <div class="text-center bg-white" style="position: sticky;top: 0px; z-index: 1;">Wake Up..WITH..A..Cup of..COFFEE !!</div>
+        <section id="video">
+            <video autoplay muted loop><source src="/New folder/video (1440p).mp4"></video>
+        </section>
+        <div id="strong" class="text-white"><p class="p1">Coffee tastes better when it is <span class="text-warning"><b>strong!</span></b> <br> <span id="span2" class="text-warning"><b>Do you agree ?</b></span></p>
+        <div id="border1"><p class="container ">A 2017 review of clinical trials found that drinking coffee is generally safe within usual levels of intake and is more likely to improve health outcomes than to cause harm at doses of 3 or 4 cups of coffee daily. Exceptions include possible increased risk in women having bone fractures, and a possible increased risk in pregnant women of fetal loss or decreased birth weight. Results were complicated by poor study quality, and differences in age, gender, health status, and serving size.</p></div></div>
+        <div style="font-family: 'Pacifico', cursive;"><h1 class="text-center text-warning mt-3">TYPES</h1></div>
+        <div class="p-3 text-white">Coffee beans are the seeds of a fruit called a coffee cherry. Coffee cherries grow on coffee trees from a genus of plants called Coffea. There are a wide variety of species of coffee plants, ranging from shrubs to trees.</div>
+<div><ul class="container text-white">
+    <li class="my-3"><b class="text-warning">Type of bean.</b> There are two main types of coffee species, Arabica and Robusta. Arabica originates from Ethiopia and produces a mild, flavorful tasting coffee. It is the most popular type worldwide. However, it is expensive to grow because the Arabica plant is sensitive to the environment, requiring shade, humidity, and steady temperatures between 60-75 degrees Fahrenheit. The Robusta coffee plant is more economical to grow because it is resistant to disease and survives in a wider range of temperatures between 65 - 97 degrees Fahrenheit. It can also withstand harsh climate changes such as variations in rainfall and strong sunlight.</li>
+    <li class="my-3"><b class="text-warning">Type of roast.</b> Coffee beans start out green. They are roasted at a high heat to produce a chemical change that releases the rich aroma and flavor associate with coffee. They are then cooled and ground for brewing. Roasting levels range from light to medium to dark. The lighter the roast, lighter the color and roasted flavor and the higher its acidity and a bitter roasted flavor. The popular french roast is medium-dark</li>
+    <li class="my-3"><b class="text-warning">Type of grind.</b> A medium grind is the most common and used for automatic drip coffee makers. A fine grind is used for deeper flavors like espresso, releases the oils, and a coarse grind is used in coffee presses.</li>
+    <li><b class="text-warning">Decaffeinated coffee.</b> This is an option for those who experience unpleasant side effects from caffeine. The two rnost cormon mnethods used to remove apply beans, caffeine regulations, which from at are coffee least then is 97% to of allowed the to chemical dry. caffeine The must solvents solvents be removed bind (methylene to to carry caffeine chloride the and Or both cthyl decaffeinated acctate) evaporate label, Or when carbon there the dioxide may beans be gas. are trace Both rinsed are residual andjor amounts dried. to of stcamed used According caffeine. or to soaked Both U.S. applied methods may cause somne loss of flavor as other naturally occurring chemicals in coffee beans that impart their unique flavor and scent may be destroyed during processing.</li>
+</ul></div>
+<div style="font-family: 'Pacifico', cursive;"><h1 class="text-center text-warning mt-5 mb-5">TOP BRANDS</h1></div>
+<div class="container">
+<div class=" mb-3" >
+    <div class="row ">
+      <div class="col-4">
+        <img style="border-radius: 20px; width: 60%;height: 230px;" src="https://cdn.thecommonscafe.com/what_is_the_most_popular_coffee_bean_at_starbucks.jpg" class="border border-white mx-5" alt="pic2">
+      </div>
+      <div class="col-8">
+        <div class="card-body">
+          <h1 class="card-title text-white">1.STARBUCKS</h1>
+          <p class="card-text text-white p-4">The brand is not known for sourcing and roasting the best coffee beans. Most of their coffee beans are dark roasted meaning, they taste bitter. And many consumers, who know their coffee, complain that Starbucks coffee has a distinct burnt taste</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 2nd row -->
+<div class=" my-5 d-flex " >
+    <div class="row d-flex">
+      <div class="col-8">
+        <div class="card-body">
+          <h1 class="card-title text-white">2. Dunkin' Donuts</h1>
+          <p class="card-text text-white p-4">Bill Rosenberg opened Open Kettle in 1948, a restaurant selling donuts and coffee in Quincy, Massachusetts (a suburb of Boston), but he changed the name in 1950 to Dunkin' Donuts after discussing with company executives.[11][12] He conceived the idea for the restaurant after his experiences selling food in factories and at construction sites, where donuts and coffee were the two most popular items.</p></div></div>
+         <div class="col-4">
+            <img style="border-radius: 20px; width: 60%;height: 230px;" src="https://tse1.mm.bing.net/th?id=OIP.A1LaXB7aCDvKu1XLESKxIAD6D6&pid=Api&P=0" class="border border-white mx-5" alt="pic3"></div>
+      
+    </div>
+  </div>
+  <!-- 3rd row  -->
+  <div class=" mb-3" >
+    <div class="row ">
+      <div class="col-4">
+        <img style="border-radius: 20px; width: 60%;height: 230px;" src="https://brewscoffee.netlify.app/PEET'S%20COFFEES.jpg" class="border border-white mx-5" alt="pic4">
+      </div>
+      <div class="col-8">
+        <div class="card-body">
+          <h1 class="card-title text-white">3.PEET'S COFFEE</h1>
+          <p class="card-text text-white p-4">Founded in 1966, Peet’s Coffee is a San Francisco Bay Area-based specialty coffee roaster and retailer. The company sells various coffee beans, teas, and related items through its retail stores and online store. Costco is a membership warehouse club, founded in 1983 in Seattle, Washington, that offers its members a variety of products, including food, electronics, and home goods.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 4th row  -->
+<div class=" my-5 d-flex " >
+    <div class="row d-flex">
+      <div class="col-8">
+        <div class="card-body">
+          <h1 class="card-title text-white">4. COSTA COFFEE</h1>
+          <p class="card-text text-white p-4">Costa Coffee was founded in London in 1971 by Sergio Costa as a wholesale operation supplying roasted coffee to caterers and specialist Italian coffee shops. It was acquired by Whitbread in 1995, sold in 2019 to The Coca-Cola Company in a deal worth £3.9bn, and has grown to 3,401 stores across 31 countries and 18,412 employees.</p></div></div>
+         <div class="col-4">
+            <img style="border-radius: 20px; width: 60%;height: 230px;" src="https://brewscoffee.netlify.app/COSTA%20COFFEE.jpg" class="border border-white mx-5" alt="pic5"></div>
+      
+    </div>
+  </div>
+<!-- 5th row  -->
+<div class=" mb-3" >
+    <div class="row ">
+      <div class="col-4">
+        <img style="border-radius: 20px; width: 60%;height: 230px;" src="https://brewscoffee.netlify.app/Mc%20cafe.jpg" class="border border-white mx-5" alt="pic4">
+      </div>
+      <div class="col-8">
+        <div class="card-body">
+          <h1 class="card-title text-white">5. Mc CAFE</h1>
+          <p class="card-text text-white p-4">McDonald’s top brass wanted to capitalize on the growing popularity of coffee pubs which was started by the success of Starbucks and they launched the first coffee and beverage chain McCafe in Australia in the year 1993. McCafe proved to be more successful than the fast food chain itself and is the largest coffee chain in Australia and New Zealand.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- gallery  -->
+<div style="font-family: 'Pacifico', cursive;"><h1 class="text-center text-warning mt-5 mb-5">GALLERY</h1></div>
+<!-- card  -->
+<!-- 1st row  -->
+<div class="d-flex container mb-5" style="margin-left: 200px;">
+    <div>
+        <img src="https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-500x375.png" width="300px" height="200px" style="border-radius: 10px;" alt="g1">
+    </div>
+    <div class="mx-4">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/flat-white-3402c4f.jpg?quality=90&resize=500,454" width="300px" height="200px" style="border-radius: 10px;" alt="g2">
+    </div>
+    <div>
+        <img src="https://etimg.etb2bimg.com/photo/94574823.cms" width="300px" height="200px" style="border-radius: 10px;" alt="g3">
+    </div>
+</div>
+<!-- 2nd row  -->
+<div class="d-flex container mb-5" style="margin-left: 200px;">
+    <div>
+        <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2018/02/cafe-style-hot-coffee-recipe-1.jpg" width="300px" height="200px" style="border-radius: 10px;" alt="g4">
+    </div>
+    <div class="mx-4">
+        <img src="https://fertilityfamily.b-cdn.net/wp-content/uploads/2023/01/PCOS-and-coffee-scaled.jpg" width="300px" height="200px" style="border-radius: 10px;" alt="g5">
+    </div>
+    <div>
+        <img src="https://www.thespruceeats.com/thmb/HJrjMfXdLGHbgMhnM0fMkDx9XPQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-espresso-765702-hero-03_cropped-ffbc0c7cf45a46ff846843040c8f370c.jpg" width="300px" height="200px" style="border-radius: 10px;" alt="g6">
+    </div>
+</div>
+<!-- 3rd row  -->
+<div class="d-flex container" style="margin-left: 200px;">
+    <div>
+        <img src="https://dailycoffeenews.com/wp-content/uploads/2022/05/cup-of-coffee-1.jpg" width="300px" height="200px" style="border-radius: 10px;" alt="g4">
+    </div>
+    <div class="mx-4">
+        <img src="https://media.cnn.com/api/v1/images/stellar/prod/150929101049-black-coffee-stock.jpg?q=w_3000,h_3074,x_0,y_0,c_fill" width="300px" height="200px" style="border-radius: 10px;" alt="g5">
+    </div>
+    <div>
+        <img src="https://techcrunch.com/wp-content/uploads/2022/09/Coffee-Cup-With-Ball.jpg" width="300px" height="200px" style="border-radius: 10px;" alt="g6">
+    </div>
+</div>
+<!-- feedback  -->
+<div style="font-family: 'Pacifico', cursive;"><h1 class="text-center text-warning mt-5 mb-5">FEEDBACK</h1></div>
+<!-- form  -->
+<form>
+    <div class="row mb-4">
+        <div class="col-3"></div>
+        <div class="col-2 text-white text-center">Your Name</div>
+        <div class="col-4"><input class="form-control" type="text" placeholder="Enter your name"></div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-3"></div>
+        <div class="col-2 text-white text-center">Your Email</div>
+        <div class="col-4"><input class="form-control" type="email" placeholder="Enter your email"></div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-3"></div>
+        <div class="col-2 text-white text-center">Feedback</div>
+        <div class="col-4"><textarea name="Welcome.." id="" cols="54" rows="5"></textarea></div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-3"></div>
+        <div class="col-2"></div>
+        <div class="col-4"><button class="btn btn-success">Submit</button></div>
+        <div class="col-3">
+        </div>
+    </div>
+</form>
+<!-- footer  -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+      
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright:
+          <a class="text-white text-decoration-none" href="https://mdbootstrap.com/">Costacoffee.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+</body>
+</html>
